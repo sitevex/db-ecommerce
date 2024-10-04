@@ -32,10 +32,12 @@ class DatabaseSeeder extends Seeder
             /* RoleSeeder::class,
             PermissionSeeder::class, */
 
-            CountrySeeder::class,
+            /* CountrySeeder::class,
             StateSeeder::class,
-            CitySeeder::class,
-            
+            CitySeeder::class, */
+
+            SupplierSeeder::class
+
         ]);
     }
 }

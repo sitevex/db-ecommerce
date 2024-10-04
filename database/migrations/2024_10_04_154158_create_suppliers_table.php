@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('tax_id')->unique();
             $table->string('provider_type')->nullable();
             $table->string('address')->nullable();
-            $table->string('phone_one')->nullable();
-            $table->string('phone_two');
+            $table->string('phone_one');
+            $table->string('phone_two')->nullable();
             $table->string('email')->unique();
             $table->string('website')->nullable();
             $table->string('contact_name')->nullable();
