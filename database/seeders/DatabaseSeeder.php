@@ -36,8 +36,12 @@ class DatabaseSeeder extends Seeder
             StateSeeder::class,
             CitySeeder::class, */
 
-            SupplierSeeder::class
+            /* SupplierSeeder::class */
 
+            /* CustomerCategorySeeder::class,
+            CustomerSeeder::class, */
+
+            /* EmployeeSeeder::class, */
         ]);
     }
 }
