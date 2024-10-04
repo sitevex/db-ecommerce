@@ -29,8 +29,13 @@ class DatabaseSeeder extends Seeder
 
             /* UserSeeder::class, */
 
-            RoleSeeder::class,
-            PermissionSeeder::class,
+            /* RoleSeeder::class,
+            PermissionSeeder::class, */
+
+            CountrySeeder::class,
+            StateSeeder::class,
+            CitySeeder::class,
+            
         ]);
     }
 }
