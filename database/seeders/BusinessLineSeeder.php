@@ -29,7 +29,6 @@ class BusinessLineSeeder extends Seeder
             ['name' => 'CLOUD', 'slug' => 'cloud', 'description' => null, 'image' => null, 'image_url' => null, 'status' => 'active'],
             ['name' => 'REDES WIFI END 2 END', 'slug' => 'redes-wifi-end-2-end', 'description' => null, 'image' => null, 'image_url' => null, 'status' => 'active'],
             ['name' => 'EQUIPO DE ZC', 'slug' => 'equipo-de-zc', 'description' => null, 'image' => null, 'image_url' => null, 'status' => 'active'],
-
         ]);
     }
 }

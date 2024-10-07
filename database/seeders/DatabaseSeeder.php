@@ -42,6 +42,14 @@ class DatabaseSeeder extends Seeder
             CustomerSeeder::class, */
 
             /* EmployeeSeeder::class, */
+
+            /* BusinessLineSeeder::class,
+            BrandSeeder::class,
+            SubgroupsSeeder::class, */
+
+            /* WarehouseSeeder::class, */
+
+            /* ProductSeeder::class, */
         ]);
     }
 }
