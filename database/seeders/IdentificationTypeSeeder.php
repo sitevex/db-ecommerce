@@ -14,13 +14,13 @@ class IdentificationTypeSeeder extends Seeder
     public function run(): void
     {
         IdentificationType::insert([
-            ['name' => 'Cedula', 'status' => 'active'],
-            ['name' => 'RUC', 'status' => 'active'],
-            ['name' => 'Passport', 'status' => 'active'],
-            ['name' => 'Driver’s License', 'status' => 'active'],
-            ['name' => 'National ID', 'status' => 'active'],
-            ['name' => 'Social Security Number', 'status' => 'active'],
-            ['name' => 'Work Permit', 'status' => 'active'],
+            ['name' => 'Cedula', 'slug' => 'cedula', 'status' => 'active'],
+            ['name' => 'RUC', 'slug' => 'ruc', 'status' => 'active'],
+            ['name' => 'Passport', 'slug' => 'passport', 'status' => 'active'],
+            ['name' => 'Driver’s License', 'slug' => 'drivers-license', 'status' => 'active'],
+            ['name' => 'National ID', 'slug' => 'national-id', 'status' => 'active'],
+            ['name' => 'Social Security Number', 'slug' => 'social-security-number', 'status' => 'active'],
+            ['name' => 'Work Permit', 'slug' => 'work-permit', 'status' => 'active'],
         ]);
     }
 }

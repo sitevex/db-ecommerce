@@ -14,9 +14,9 @@ class UserTypeSeeder extends Seeder
     public function run(): void
     {
         UserType::insert([
-            ['name' => 'customer', 'description' => '', 'status' => 'active', 'department_id' => 12],
-            ['name' => 'Administrator', 'description' => '', 'status' => 'active', 'department_id' => 3],
-            ['name' => 'Technician', 'description' => 'Operates medical equipment and technology', 'status' => 'active', 'department_id' => 4],
+            ['name' => 'Customer', 'slug'=> 'customer', 'description' => '', 'status' => 'active', 'department_id' => 12],
+            ['name' => 'Administrator', 'slug'=> 'administrator', 'description' => '', 'status' => 'active', 'department_id' => 3],
+            ['name' => 'Technician', 'slug'=> 'technician', 'description' => 'Operates medical equipment and technology', 'status' => 'active', 'department_id' => 4],
         ]);
     }
 }

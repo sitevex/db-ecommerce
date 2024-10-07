@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('price_lists', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->string('slug')->unique();
             $table->enum('status', ['active', 'inactive']);
             $table->timestamps();
         });

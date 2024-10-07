@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('customer_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->enum('status', ['activo', 'inactivo']);
+            $table->string('slug')->unique();
+            $table->enum('status', ['active', 'inactive']);
             $table->timestamps();
         });
     }

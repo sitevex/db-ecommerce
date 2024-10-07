@@ -33,7 +33,7 @@ return new class extends Migration
             $table->string('contact_phone_one')->nullable();
             $table->string('contact_phone_two')->nullable();
             $table->string('contact_email')->nullable();
-            $table->enum('status', ['activo', 'inactivo']);
+            $table->enum('status', ['active', 'inactive']);
             $table->foreignId('customer_category_id')->constrained('customer_categories')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('marital_status_id')->constrained('marital_statuses')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('city_id')->constrained('cities')->onUpdate('cascade')->onDelete('cascade');

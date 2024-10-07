@@ -34,7 +34,7 @@ return new class extends Migration
             $table->string('contact_relationship')->nullable();
             $table->string('contact_phone_one')->nullable();
             $table->string('contact_phone_two')->nullable();
-            $table->enum('status', ['activo', 'inactivo']);
+            $table->enum('status', ['active', 'inactive']);
             $table->foreignId('marital_status_id')->constrained('marital_statuses')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('city_id')->constrained('cities')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('state_id')->constrained('states')->onUpdate('cascade')->onDelete('cascade');

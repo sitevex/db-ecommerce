@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\CustomerCategory;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,7 +21,8 @@ class CustomerCategoryFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->unique()->word(), // Nombre único de la categoría
+            'name' => $this->faker->unique()->words(2, true), // Nombre único de la categoría
+            'slug' => Str::slug($this->faker->unique()->words(2, true)),
             'status' => $this->faker->randomElement(['activo', 'inactivo']), // Estado de la categoría
         ];
     }

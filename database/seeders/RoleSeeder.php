@@ -14,9 +14,9 @@ class RoleSeeder extends Seeder
     public function run(): void
     {
         Role::insert([
-            ['name' => 'customer', 'description' => '', 'active' => true],
-            ['name' => 'Administrator', 'description' => '', 'active' => true],
-            ['name' => 'Technician', 'description' => 'Operates medical equipment and technology', 'active' => true],
+            ['name' => 'Customer', 'slug' => 'customer' , 'description' => '', 'active' => true],
+            ['name' => 'Administrator', 'slug' => 'administrator' , 'description' => '', 'active' => true],
+            ['name' => 'Technician', 'slug' => 'technician' , 'description' => 'Operates medical equipment and technology', 'active' => true],
         ]);
     }
 }

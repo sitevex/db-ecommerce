@@ -14,12 +14,12 @@ class MaritalStatusSeeder extends Seeder
     public function run(): void
     {
         MaritalStatus::insert([
-            ['name' => 'Soltero', 'status' => 'active'],
-            ['name' => 'Casado', 'status' => 'active'],
-            ['name' => 'Divorciado', 'status' => 'active'],
-            ['name' => 'Viudo', 'status' => 'active'],
-            ['name' => 'Unión libre', 'status' => 'active'],
-            ['name' => 'Otro', 'status' => 'active'],
+            ['name' => 'Soltero', 'slug' => 'soltero', 'status' => 'active'],
+            ['name' => 'Casado', 'slug' => 'casado', 'status' => 'active'],
+            ['name' => 'Divorciado', 'slug' => 'divorciado', 'status' => 'active'],
+            ['name' => 'Viudo', 'slug' => 'viudo', 'status' => 'active'],
+            ['name' => 'Unión libre', 'slug' => 'union-libre', 'status' => 'active'],
+            ['name' => 'Otro', 'slug' => 'otro', 'status' => 'active'],
         ]);
     }
 }

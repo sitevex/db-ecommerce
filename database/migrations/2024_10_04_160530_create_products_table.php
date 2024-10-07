@@ -31,7 +31,7 @@ return new class extends Migration
             $table->decimal('height', 8, 2)->nullable();
             $table->decimal('volume', 8, 2)->nullable();
             $table->decimal('weight', 8, 2)->nullable();
-            $table->enum('status', ['active', 'inactive'])->default('inactive');
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->foreignId('business_line_id')->constrained('business_lines')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('brand_id')->constrained('brands')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('subgroup_id')->constrained('subgroups')->onUpdate('cascade')->onDelete('cascade');
