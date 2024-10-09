@@ -28,6 +28,7 @@ class UserFactory extends Factory
     {
         return [
             'user_type_id' => $this->faker->numberBetween(1, 3), // Valores entre 1 y 3
+            'username' => $this->faker->unique()->numerify('##########'),
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
