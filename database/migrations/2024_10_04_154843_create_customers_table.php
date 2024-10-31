@@ -34,6 +34,7 @@ return new class extends Migration
             $table->string('contact_phone_two')->nullable();
             $table->string('contact_email')->nullable();
             $table->enum('status', ['active', 'inactive']);
+            $table->timestamp('last_updated_at')->nullable();
             $table->timestamp('last_reminder')->nullable();
             $table->foreignId('customer_category_id')->constrained('customer_categories')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('marital_status_id')->constrained('marital_statuses')->onUpdate('cascade')->onDelete('cascade');
