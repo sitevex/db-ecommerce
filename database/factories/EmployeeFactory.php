@@ -23,7 +23,8 @@ class EmployeeFactory extends Factory
             'user_id' => \App\Models\User::all()->random()->id,  // ID de usuario existente
             'department_id' => \App\Models\Department::all()->random()->id,  // ID de departamento existente
             'nui' => $this->faker->unique()->numerify('##########'),  // NUI (Número Único de Identificación)
-            'id_type' => $this->faker->randomElement(['Cedula', 'RUC']),  // Tipo de ID
+            'id_type' => \App\Models\IdentificationType::all()->random()->id,
+            // 'id_type' => $this->faker->randomElement(['Cedula', 'RUC']),  // Tipo de ID
             'name' => $this->faker->firstName(),  // Nombre
             'lastname' => $this->faker->lastName(),  // Apellido
             'image' => $this->faker->imageUrl(),  // Imagen (opcional)

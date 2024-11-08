@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
 
             /* EmployeeSeeder::class, */
 
-           /*  BusinessLineSeeder::class,
+            /* BusinessLineSeeder::class,
             BrandSeeder::class,
             SubgroupsSeeder::class, */
 

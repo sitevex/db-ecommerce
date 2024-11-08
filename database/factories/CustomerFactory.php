@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Customer;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Customer>
@@ -20,9 +21,11 @@ class CustomerFactory extends Factory
     public function definition(): array
     {
         return [
+            'uuid' => (string) Str::uuid(),
             'user_id' => \App\Models\User::all()->random()->id,  // ID de usuario existente
             'nui' => $this->faker->unique()->numerify('##########'),  // NUI (Número Único de Identificación)
-            'id_type' => $this->faker->randomElement(['Cedula', 'RUC', 'DNI', 'Pasaporte', 'Licencia']),  // Tipo de ID
+            'id_type' => \App\Models\IdentificationType::all()->random()->id,
+            // 'id_type' => $this->faker->randomElement(['Cedula', 'RUC', 'DNI', 'Pasaporte', 'Licencia']),  // Tipo de ID
             'name' => $this->faker->firstName(),  // Nombre
             'lastname' => $this->faker->lastName(),  // Apellido
             'image' => $this->faker->imageUrl(),  // Imagen
@@ -33,9 +36,11 @@ class CustomerFactory extends Factory
             'postal_code' => $this->faker->postcode(),  // Código postal
             'phone_one' => $this->faker->phoneNumber(),  // Teléfono 1
             'phone_two' => $this->faker->optional()->phoneNumber(),  // Teléfono 2 (opcional)
+            'email' => $this->faker->unique()->safeEmail(),  // Email comercial
             'commercial_email' => $this->faker->unique()->safeEmail(),  // Email comercial
             'billing_email' => $this->faker->optional()->safeEmail(),  // Email de facturación (opcional)
             'contact_name' => $this->faker->optional()->name(),  // Nombre del contacto (opcional)
+            'contact_lastname' => $this->faker->optional()->name(),  // Nombre del contacto (opcional)
             'contact_position' => $this->faker->optional()->jobTitle(),  // Posición del contacto (opcional)
             'contact_phone_one' => $this->faker->optional()->phoneNumber(),  // Teléfono de contacto 1 (opcional)
             'contact_phone_two' => $this->faker->optional()->phoneNumber(),  // Teléfono de contacto 2 (opcional)
