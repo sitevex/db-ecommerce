@@ -13,12 +13,10 @@ return new class extends Migration
     {
         Schema::create('customer_update_logs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('customer_id')->constrained('customers')->onDelete('cascade'); // Relación con customers
-            $table->unsignedBigInteger('updated_by'); // ID del usuario o sistema que realizó la actualización
-            $table->json('changed_fields'); // Campos modificados en formato JSON para mayor flexibilidad
-
-            // Agregar relación con la tabla de usuarios si 'updated_by' se refiere a usuarios
+            $table->foreignId('customer_id')->constrained('customers')->onDelete('cascade');
+            $table->unsignedBigInteger('updated_by')->nullable(); // Usuario que realizó la actualización
             $table->foreign('updated_by')->references('id')->on('users')->onDelete('set null');
+            $table->json('changed_fields'); // Lista de campos cambiados en formato JSON
 
             $table->timestamps();
         });

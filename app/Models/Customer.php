@@ -14,4 +14,21 @@ class Customer extends Model
      * @var string
      */
     protected $table = 'customers';
+
+    /**
+     * Relación con los registros de actualizaciones.
+     */
+    public function updateLogs()
+    {
+        return $this->hasMany(CustomerUpdateLog::class);
+    }
+
+    /**
+     * Relación con las aceptaciones de términos.
+     */
+    public function termsAcceptances()
+    {
+        return $this->hasMany(TermsAcceptance::class);
+    }
+
 }
