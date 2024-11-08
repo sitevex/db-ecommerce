@@ -22,13 +22,14 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->enum('gender', ['male', 'female'])->nullable();
             $table->string('business_name')->nullable();
-            $table->string('address');
-            $table->string('shipping_address')->nullable();
+            $table->string('address')->nullable();
             $table->string('postal_code')->nullable();
             $table->string('phone_one');
             $table->string('phone_two')->nullable();
             $table->string('email');
             $table->string('commercial_email');
+            $table->string('shipping_address')->nullable();
+            $table->string('business_address');
             $table->string('billing_email')->nullable();
             $table->string('contact_name')->nullable();
             $table->string('contact_lastname')->nullable();

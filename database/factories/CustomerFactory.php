@@ -33,6 +33,7 @@ class CustomerFactory extends Factory
             'business_name' => $this->faker->company(),  // Nombre del negocio
             'address' => $this->faker->address(),  // Dirección
             'shipping_address' => $this->faker->address(),  // Dirección de envío
+            'business_address' => $this->faker->address(),
             'postal_code' => $this->faker->postcode(),  // Código postal
             'phone_one' => $this->faker->phoneNumber(),  // Teléfono 1
             'phone_two' => $this->faker->optional()->phoneNumber(),  // Teléfono 2 (opcional)
