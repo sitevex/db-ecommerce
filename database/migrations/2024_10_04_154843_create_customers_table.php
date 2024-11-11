@@ -28,9 +28,9 @@ return new class extends Migration
             $table->string('phone_two')->nullable();
             $table->string('email');
             $table->string('commercial_email');
-            $table->string('shipping_address')->nullable();
-            $table->string('business_address');
             $table->string('billing_email')->nullable();
+            $table->string('business_address');
+            $table->string('shipping_address')->nullable();
             $table->string('contact_name')->nullable();
             $table->string('contact_lastname')->nullable();
             $table->string('contact_position')->nullable();
