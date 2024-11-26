@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('description')->nullable();
             $table->integer('staff_quantity')->default(0);
-            $table->boolean('is_medical')->default(true);
+            $table->boolean('is_medical')->default(false);
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
