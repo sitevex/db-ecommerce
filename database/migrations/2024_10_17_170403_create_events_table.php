@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
+            $table->enum('type',['evento','campania', 'encuesta', 'sondeo'])->default('evento');
             $table->string('event_name');
             $table->text('event_description')->nullable();
-            $table->dateTime('event_date');
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
+            $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();
         });
     }

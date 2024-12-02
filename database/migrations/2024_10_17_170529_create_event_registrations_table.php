@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('event_registrations', function (Blueprint $table) {
             $table->id();
             $table->foreignId('event_id')->constrained('events')->onDelete('cascade');
-            $table->string('client_name');
-            $table->string('client_identification', 100);
-            $table->string('client_email');
+            $table->foreignId('user_id')->nullable()->constrained('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('client_name')->nullable();
+            $table->string('client_identification', 100)->nullable();
+            $table->string('client_email')->nullable();
             $table->string('client_phone', 50)->nullable();
             $table->string('company_name')->nullable();
             $table->boolean('terms_accepted')->default(false);
