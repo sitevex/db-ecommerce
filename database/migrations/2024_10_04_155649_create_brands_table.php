@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('image_light_url')->nullable();
             $table->string('image_dark')->nullable();
             $table->string('image_dark_url')->nullable();
+            $table->enum('categories', ['sales', 'internal_inventory'])->default('sales');
             $table->enum('status', ['active', 'inactive']);
             $table->timestamps();
         });

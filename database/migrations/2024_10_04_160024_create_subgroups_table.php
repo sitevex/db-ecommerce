@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('image')->nullable();
             $table->string('image_url')->nullable();
+            $table->enum('categories', ['sales', 'internal_inventory'])->default('sales');
             $table->enum('status', ['active', 'inactive']);
             $table->timestamps();
         });
