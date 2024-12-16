@@ -22,9 +22,9 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            /* DepartmentSeeder::class, */
-            /* UserTypeSeeder::class, */
-            /* IdentificationTypeSeeder::class, 
+            /* UserTypeSeeder::class, */    /* NO */
+            /* DepartmentSeeder::class,
+            IdentificationTypeSeeder::class, 
             MaritalStatusSeeder::class, */
 
             /* UserSeeder::class, */
@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
             SubgroupsSeeder::class, */
 
             /* WarehouseSeeder::class, */
-
+            /* PriceListSeeder::class, */
             /* ProductSeeder::class, */
         ]);
     }
