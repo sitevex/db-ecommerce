@@ -16,10 +16,10 @@ return new class extends Migration
             $table->uuid('uuid')->nullable()->unique();
             $table->string('slug')->nullable()->unique();
             $table->string('sku')->unique();
-            $table->string('barcode')->nullable()->unique();
+            // $table->string('barcode')->nullable()->unique();    // Codigo de barra
             $table->string('name');
             $table->text('description')->nullable();
-            $table->string('manufacturer_code')->nullable();
+            $table->string('manufacturer_code')->nullable();    // Codigo de fabrica
             $table->string('image')->nullable();
             $table->string('image_url')->nullable();
             $table->decimal('price', 10, 2);
@@ -31,7 +31,7 @@ return new class extends Migration
             $table->decimal('height', 8, 2)->nullable();
             $table->decimal('volume', 8, 2)->nullable();
             $table->decimal('weight', 8, 2)->nullable();
-            $table->enum('status', ['active', 'inactive'])->default('active');
+            $table->enum('publication_status', ['published', 'draft'])->default('published');
             $table->foreignId('business_line_id')->constrained('business_lines')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('brand_id')->constrained('brands')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('subgroup_id')->constrained('subgroups')->onUpdate('cascade')->onDelete('cascade');
