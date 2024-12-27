@@ -14,5 +14,11 @@ class AcademyCategory extends Model
      * @var string
      */
     protected $table = 'academy_categories';
-    
+
+    protected $fillable = ['name', 'slug', 'status'];
+
+    public function courses()
+    {
+        return $this->hasMany(AcademyCourse::class, 'category_id');
+    }
 }

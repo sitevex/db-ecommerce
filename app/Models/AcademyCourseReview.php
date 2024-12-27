@@ -14,5 +14,16 @@ class AcademyCourseReview extends Model
      * @var string
      */
     protected $table = 'academy_course_reviews';
-    
+
+    protected $fillable = ['student_id', 'course_id', 'rating', 'review'];
+
+    public function student()
+    {
+        return $this->belongsTo(AcademyStudent::class, 'student_id');
+    }
+
+    public function course()
+    {
+        return $this->belongsTo(AcademyCourse::class, 'course_id');
+    }
 }

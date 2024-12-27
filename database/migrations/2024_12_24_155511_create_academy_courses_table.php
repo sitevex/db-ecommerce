@@ -20,16 +20,19 @@ return new class extends Migration
             $table->string('image_url')->nullable();
             $table->enum('level', ['beginner', 'intermediate', 'advanced'])->default('beginner');
             $table->enum('lenguage', ['es', 'en', 'otro'])->default('es');
+            $table->boolean('is_free')->default(false); // Indica si el curso es gratuito
             $table->decimal('price', 10, 2);
             $table->decimal('discount', 10, 2);
             $table->enum('modality', ['online', 'presential'])->default('online'); // Modalidad del curso
-            $table->string('location')->nullable(); // Ubicación (si es presencial)
-            $table->dateTime('start_date')->nullable(); // Fecha de inicio
-            $table->dateTime('end_date')->nullable(); // Fecha de fin
-            $table->string('duration')->nullable(); // en horas o minutos
+            // $table->string('location')->nullable(); // Ubicación (si es presencial)
+            // $table->dateTime('start_date')->nullable(); // Fecha de inicio
+            // $table->dateTime('end_date')->nullable(); // Fecha de fin
+            // $table->string('duration')->nullable(); // en horas o minutos
+            // $table->integer('max_students')->nullable(); // Límite opcional de estudiantes
             $table->enum('publication_status', ['draft', 'published', 'archived'])->default('published');
+            // $table->foreignId('city_id')->constrained('cities')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('category_id')->constrained('academy_categories')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('instructor_id')->constrained('academy_instructors')->onUpdate('cascade')->onDelete('cascade');
+            // $table->foreignId('instructor_id')->constrained('academy_instructors')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('brand_id')->nullable()->constrained('brands')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

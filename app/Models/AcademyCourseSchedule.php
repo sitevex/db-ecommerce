@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AcademyModule extends Model
+class AcademyCourseSchedule extends Model
 {
     use HasFactory;
     /**
@@ -13,17 +13,16 @@ class AcademyModule extends Model
      *
      * @var string
      */
-    protected $table = 'academy_modules';
+    protected $table = 'academy_course_schedules';
 
-    protected $fillable = ['course_id', 'title', 'slug', 'order'];
+    protected $fillable = [
+        'course_id', 'city_id', 'start_date', 'end_date', 'start_time', 
+        'end_time', 'location', 'max_students', 'status'
+    ];
 
     public function course()
     {
         return $this->belongsTo(AcademyCourse::class, 'course_id');
     }
 
-    public function lessons()
-    {
-        return $this->hasMany(AcademyLesson::class, 'module_id');
-    }
 }

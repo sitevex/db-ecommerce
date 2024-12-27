@@ -14,4 +14,16 @@ class AcademyEnrollment extends Model
      * @var string
      */
     protected $table = 'academy_enrollments';
+
+    protected $fillable = ['student_id', 'course_id', 'status'];
+
+    public function student()
+    {
+        return $this->belongsTo(AcademyStudent::class, 'student_id');
+    }
+
+    public function course()
+    {
+        return $this->belongsTo(AcademyCourse::class, 'course_id');
+    }
 }
