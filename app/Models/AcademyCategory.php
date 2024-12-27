@@ -15,7 +15,7 @@ class AcademyCategory extends Model
      */
     protected $table = 'academy_categories';
 
-    protected $fillable = ['name', 'slug', 'status'];
+    protected $fillable = ['name', 'slug', 'description', 'status'];
 
     public function courses()
     {

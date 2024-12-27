@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('bio')->nullable(); // Biografía
             $table->string('expertise')->nullable(); // Área de experiencia
             $table->string('social_links')->nullable(); // Redes sociales
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }
