@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             IdentificationTypeSeeder::class, 
             MaritalStatusSeeder::class,
             RelationshipSeeder::class, */
+            PositionSeeder::class,
 
             /* UserSeeder::class, */
 
