@@ -25,8 +25,8 @@ class DatabaseSeeder extends Seeder
             /* UserTypeSeeder::class, */    /* NO */
             /* DepartmentSeeder::class,
             IdentificationTypeSeeder::class, 
-            MaritalStatusSeeder::class, */
-            RelationshipSeeder::class
+            MaritalStatusSeeder::class,
+            RelationshipSeeder::class, */
 
             /* UserSeeder::class, */
 

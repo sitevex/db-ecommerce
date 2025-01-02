@@ -25,7 +25,7 @@ return new class extends Migration
             $table->enum('gender', ['male', 'female'])->nullable();
             $table->date('birthdate');
             $table->unsignedTinyInteger('age');
-            $table->string('position');
+            // $table->string('position');
             $table->date('hire_date');
             $table->string('address');
             $table->string('phone_one');
