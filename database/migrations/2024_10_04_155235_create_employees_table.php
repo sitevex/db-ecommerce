@@ -25,17 +25,12 @@ return new class extends Migration
             $table->enum('gender', ['male', 'female'])->nullable();
             $table->date('birthdate');
             $table->unsignedTinyInteger('age');
-            // $table->string('position');
-            $table->date('hire_date');
+            $table->date('hire_date');  // Fecha de contratacion
             $table->string('address');
             $table->string('phone_one');
             $table->string('phone_two')->nullable();
-            $table->string('staff_email')->nullable();
-            $table->string('work_email')->nullable();
-            // $table->string('contact_name')->nullable();
-            // $table->string('contact_relationship')->nullable();
-            // $table->string('contact_phone_one')->nullable();
-            // $table->string('contact_phone_two')->nullable();
+            $table->string('personal_email')->nullable();  // Correo personal
+            $table->string('work_email')->nullable();   // Correo del trabajo
             $table->enum('status', ['active', 'inactive'])->default('inactive');
             $table->foreignId('marital_status_id')->constrained('marital_statuses')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('city_id')->constrained('cities')->onUpdate('cascade')->onDelete('cascade');

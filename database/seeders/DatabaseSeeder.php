@@ -23,20 +23,23 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             /* UserTypeSeeder::class, */    /* NO */
-            /* DepartmentSeeder::class,
+
+            /* CountrySeeder::class,
+            StateSeeder::class,
+            CitySeeder::class, */
+
+            /* BranchSeeder::class,
+            DepartmentSeeder::class,
+            ContractTypeSeeder::class,
             IdentificationTypeSeeder::class, 
             MaritalStatusSeeder::class,
-            RelationshipSeeder::class, */
-            PositionSeeder::class,
+            RelationshipSeeder::class,
+            PositionSeeder::class, */
 
             /* UserSeeder::class, */
 
             /* RoleSeeder::class,
             PermissionSeeder::class, */
-
-            /* CountrySeeder::class,
-            StateSeeder::class,
-            CitySeeder::class, */
 
             /* SupplierSeeder::class */
 

@@ -15,13 +15,24 @@ return new class extends Migration
             $table->id();
             $table->foreignId('employee_id')->constrained('employees')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('position_id')->nullable()->constrained('positions')->onUpdate('cascade')->onDelete('set null');
-            // $table->string('position');
-            $table->date('start_date');
-            $table->date('end_date')->nullable();
-            $table->string('contract_type')->nullable();
-            $table->text('description')->nullable();
+            $table->foreignId('department_id')->nullable()->constrained('departments')->onUpdate('cascade')->onDelete('set null');
+            // $table->foreignId('office_id')->nullable()->constrained('offices')->onUpdate('cascade')->onDelete('set null');
+            $table->foreignId('branch_id')->nullable()->constrained('branches')->onUpdate('cascade')->onDelete('set null');
+            $table->enum('action_type', [
+                'hiring', 'onboarding', 'promotion', 'transfer', 'termination', 'rehire', 'training', 
+                'contract_change', 'suspension', 'leave_of_absence', 
+                'salary_change', 'recognition', 'performance_review',
+                'retirement', 'role_change', 'shift_change', 'temporary_role'
+            ])->nullable(); // Tipo de acción
+            $table->string('work_email')->nullable(); // Correo laboral asignado durante ese periodo
+            $table->foreignId('contract_type_id')->nullable()->constrained('contract_types')->onUpdate('cascade')->onDelete('set null'); // Si el tipo de contrato es eliminado, se establece como null
+            $table->date('start_date'); // Fecha de inicio
+            $table->date('end_date')->nullable(); // Fecha de finalización
+            $table->text('description')->nullable(); // Descripción adicional
             $table->timestamps();
         });
+
+        
     }
 
     /**
