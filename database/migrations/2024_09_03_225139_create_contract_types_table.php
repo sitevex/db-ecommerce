@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name')->unique(); // Nombre del tipo de contrato (Ej. Indefinido, Emergente, Temporal)
             $table->string('slug')->unique();
             $table->text('description')->nullable(); // Descripción opcional para mayor detalle
-            $table->enum('status', ['active', 'intactive'])->default('active'); // Indica si el tipo de contrato está disponible
+            $table->enum('status', ['active', 'inactive'])->default('active'); // Indica si el tipo de contrato está disponible
             $table->timestamps();
         });
     }
