@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('position')->nullable();
             $table->foreignId('relationship_id')->nullable()->constrained('relationships')->onUpdate('cascade')->onDelete('set null');
-            // $table->enum('entity_type', ['employee', 'customer']); // Tipo de entidad (cliente o empleado)
-            $table->string('entity_type'); // Tipo de la entidad (modelo asociado: 'Customer' o 'Employee')
+            $table->enum('entity_type', ['employee', 'customer']); // Tipo de entidad (cliente o empleado)
+            // $table->string('entity_type'); // Tipo de la entidad (modelo asociado: 'Customer' o 'Employee')
             // $table->foreignId('position_id')->nullable()->constrained('positions')->onUpdate('cascade')->onDelete('set null');
             $table->timestamps();
         });
