@@ -25,7 +25,7 @@ class DepartmentSeeder extends Seeder
             ['name' => 'Talento Humano', 'slug' => 'talento-humano', 'description' => '', 'staff_quantity' => 1, 'is_medical' => false, 'status' => 'inactive'],
             ['name' => 'Técnico', 'slug' => 'tecnico', 'description' => '', 'staff_quantity' => 5, 'is_medical' => false, 'status' => 'active'],
             ['name' => 'Ventas', 'slug' => 'ventas', 'description' => '', 'staff_quantity' => 10, 'is_medical' => false, 'status' => 'active'],
-            ['name' => 'Customer', 'slug' => 'customer', 'description' => '', 'staff_quantity' => 0, 'is_medical' => false, 'status' => 'active'],
+            // ['name' => 'Customer', 'slug' => 'customer', 'description' => '', 'staff_quantity' => 0, 'is_medical' => false, 'status' => 'active'],
         ]);
     }
 }
