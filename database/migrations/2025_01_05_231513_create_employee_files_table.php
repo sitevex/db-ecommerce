@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('file_name')->nullable();
             $table->string('file_hashName')->nullable();
             $table->string('file_url')->nullable();
+            $table->bigInteger('file_size')->nullable();    // Tamaño del archivo en bytes
             $table->timestamps();
         });
     }
