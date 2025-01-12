@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('department_id')->nullable()->constrained('departments')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('position_id')->nullable()->constrained('positions')->onUpdate('cascade')->onDelete('set null');
             $table->foreignId('branch_id')->nullable()->constrained('branches')->onUpdate('cascade')->onDelete('set null');
+            $table->foreignId('contract_id')->nullable()->constrained('contract_types')->onUpdate('cascade')->onDelete('set null');
             $table->string('nui')->unique();
             $table->foreignId('id_type')->nullable()->constrained('identification_types')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
