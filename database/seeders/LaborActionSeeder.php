@@ -14,8 +14,8 @@ class LaborActionSeeder extends Seeder
     public function run(): void
     {
         LaborAction::insert([
-            ['name' => 'Contratación', 'slug' => 'contratacion', 'description' => 'Proceso mediante el cual se incorpora a una persona a la organización como empleado.', 'status' => 'active'],
-            ['name' => 'Integración', 'slug' => 'integracion', 'description' => 'Proceso de bienvenida y capacitación inicial para que un nuevo empleado se adapte a la cultura, políticas y funciones de la organización.', 'status' => 'active'],
+            // ['name' => 'Contratación', 'slug' => 'contratacion', 'description' => 'Proceso mediante el cual se incorpora a una persona a la organización como empleado.', 'status' => 'active'],
+            // ['name' => 'Integración', 'slug' => 'integracion', 'description' => 'Proceso de bienvenida y capacitación inicial para que un nuevo empleado se adapte a la cultura, políticas y funciones de la organización.', 'status' => 'active'],
             ['name' => 'Promoción', 'slug' => 'promocion', 'description' => 'Cambio a un puesto superior con mayores responsabilidades y, generalmente, mejores beneficios.', 'status' => 'active'],
             ['name' => 'Transferencia', 'slug' => 'transferencia', 'description' => 'Movimiento de un empleado a un puesto diferente dentro de la misma organización, ya sea en la misma o en otra ubicación.', 'status' => 'active'],
             ['name' => 'Terminación', 'slug' => 'terminacion', 'description' => 'Finalización del vínculo laboral entre un empleado y la organización, ya sea por decisión del empleado o de la empresa.', 'status' => 'active'],
