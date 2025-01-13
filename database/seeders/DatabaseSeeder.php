@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             BranchSeeder::class,
             DepartmentSeeder::class,
             ContractTypeSeeder::class,
+            LaborActionSeeder::class,
             IdentificationTypeSeeder::class, 
             MaritalStatusSeeder::class,
             RelationshipSeeder::class,
