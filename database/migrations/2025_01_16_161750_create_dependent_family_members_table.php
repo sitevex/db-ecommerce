@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('birthdate')->nullable();
             $table->date('deathdate')->nullable();
             $table->unsignedTinyInteger('age')->nullable();
+            $table->enum('age_unit', ['years', 'months', 'weeks', 'days'])->default('years'); // Unidad de edad
             $table->boolean('has_catastrophic_illness')->default(false);
             $table->boolean('has_disability')->default(false);
             $table->unsignedDecimal('disability_percentage', 5, 2)->nullable();
