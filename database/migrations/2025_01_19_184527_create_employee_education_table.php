@@ -23,7 +23,7 @@ return new class extends Migration
             ]); // Tipo de estudios
             $table->string('study_area')->nullable(); // Área de estudio
             $table->string('institution'); // Institución
-            $table->enum('status', ['en_curso', 'graduado', 'abandonado']); // Estado
+            $table->enum('status', ['en_curso', 'graduado', 'abandonado', 'completado']); // Estado
             $table->date('start_date'); // Fecha de inicio
             $table->date('end_date')->nullable(); // Fecha de finalización
             $table->timestamps();
