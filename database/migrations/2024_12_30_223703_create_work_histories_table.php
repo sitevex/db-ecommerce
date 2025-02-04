@@ -26,6 +26,7 @@ return new class extends Migration
                 'retirement', 'role_change', 'shift_change', 'temporary_role'
             ])->nullable(); */ // Tipo de acción
             $table->string('work_email')->nullable(); // Correo laboral asignado durante ese periodo
+            $table->string('telephone_extension', length: 10)->nullable();  // Extension telefonica asignado durante ese periodo
             $table->foreignId('contract_type_id')->nullable()->constrained('contract_types')->onUpdate('cascade')->onDelete('set null'); // Si el tipo de contrato es eliminado, se establece como null
             $table->date('start_date'); // Fecha de inicio
             $table->date('end_date')->nullable(); // Fecha de finalización

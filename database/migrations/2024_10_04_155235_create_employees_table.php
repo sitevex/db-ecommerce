@@ -33,6 +33,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('phone_one');
             $table->string('phone_two')->nullable();
+            $table->string('telephone_extension', length: 10)->nullable();
             $table->string('personal_email')->nullable();  // Correo personal
             $table->string('work_email')->nullable();   // Correo del trabajo
             $table->enum('status', ['active', 'inactive'])->default('inactive');
