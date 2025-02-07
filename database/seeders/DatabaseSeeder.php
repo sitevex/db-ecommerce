@@ -24,18 +24,18 @@ class DatabaseSeeder extends Seeder
         $this->call([
             /* UserTypeSeeder::class, */    /* NO */
 
-            CountrySeeder::class,
+            /* CountrySeeder::class,
             StateSeeder::class,
-            CitySeeder::class,
+            CitySeeder::class, */
 
-            BranchSeeder::class,
+            /* BranchSeeder::class,
             DepartmentSeeder::class,
             ContractTypeSeeder::class,
             LaborActionSeeder::class,
             IdentificationTypeSeeder::class, 
             MaritalStatusSeeder::class,
             RelationshipSeeder::class,
-            PositionSeeder::class,
+            PositionSeeder::class, */
 
             /* UserSeeder::class, */
 
@@ -44,14 +44,14 @@ class DatabaseSeeder extends Seeder
 
             /* SupplierSeeder::class */
 
-            /* CustomerCategorySeeder::class,
-            CustomerSeeder::class, */
+            /* CustomerCategorySeeder::class, */
+            /* CustomerSeeder::class, */
 
             /* EmployeeSeeder::class, */
 
-            BusinessLineSeeder::class,
+            /* BusinessLineSeeder::class,
             BrandSeeder::class,
-            SubgroupsSeeder::class,
+            SubgroupsSeeder::class, */
 
             /* WarehouseSeeder::class, */
             /* PriceListSeeder::class, */

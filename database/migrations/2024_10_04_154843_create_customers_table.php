@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('lastname')->nullable();
             $table->string('image')->nullable();
+            $table->string('image_url')->nullable();
             $table->enum('gender', ['male', 'female'])->nullable();
             $table->string('business_name')->nullable();
             $table->string('address')->nullable();
