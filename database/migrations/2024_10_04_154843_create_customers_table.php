@@ -32,12 +32,6 @@ return new class extends Migration
             $table->string('billing_email')->nullable();
             $table->string('business_address');
             $table->string('shipping_address')->nullable();
-            // $table->string('contact_name')->nullable();
-            // $table->string('contact_lastname')->nullable();
-            // $table->string('contact_position')->nullable();
-            // $table->string('contact_phone_one')->nullable();
-            // $table->string('contact_phone_two')->nullable();
-            // $table->string('contact_email')->nullable();
             $table->enum('status', ['active', 'inactive']);
             $table->timestamp('last_updated_at')->nullable();
             $table->timestamp('last_reminder_at')->nullable();
