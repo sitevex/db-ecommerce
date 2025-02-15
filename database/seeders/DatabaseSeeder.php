@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
 
             /* SupplierSeeder::class */
 
-            /* CustomerCategorySeeder::class, */
+            CustomerCategorySeeder::class,
             /* CustomerSeeder::class, */
 
             /* EmployeeSeeder::class, */
