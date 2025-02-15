@@ -41,7 +41,7 @@ return new class extends Migration
             $table->foreignId('city_id')->constrained('cities')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('state_id')->constrained('states')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('country_id')->constrained('countries')->onUpdate('cascade')->onDelete('cascade');
-            $table->text('current_description ')->nullable();
+            $table->text('current_description')->nullable();
             $table->timestamps();
         });
     }
